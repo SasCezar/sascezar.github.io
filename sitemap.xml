@@ -3,236 +3,188 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
-    <loc>/courses/example/example1/</loc>
-    <lastmod>2019-05-05T00:00:00+01:00</lastmod>
+    <loc>http://sascezar.github.io/courses/example/</loc>
+    <lastmod>2020-04-05T20:01:19+02:00</lastmod>
   </url>
   
   <url>
-    <loc>/courses/example/</loc>
-    <lastmod>2018-09-09T00:00:00+00:00</lastmod>
+    <loc>http://sascezar.github.io/courses/example/example1/</loc>
+    <lastmod>2020-04-05T20:01:19+02:00</lastmod>
   </url>
   
   <url>
-    <loc>/courses/example/example2/</loc>
-    <lastmod>2019-05-05T00:00:00+01:00</lastmod>
+    <loc>http://sascezar.github.io/courses/example/example2/</loc>
+    <lastmod>2020-04-05T20:01:19+02:00</lastmod>
   </url>
   
   <url>
-    <loc>/hero/</loc>
+    <loc>http://sascezar.github.io/hero/</loc>
+    <lastmod>2020-04-05T20:01:19+02:00</lastmod>
   </url>
   
   <url>
-    <loc>/talk/example/</loc>
-    <lastmod>2030-06-01T13:00:00+00:00</lastmod>
+    <loc>http://sascezar.github.io/authors/cezarsas/</loc>
+    <lastmod>2020-04-14T18:49:36+02:00</lastmod>
   </url>
   
   <url>
-    <loc>/talk/</loc>
-    <lastmod>2030-06-01T13:00:00+00:00</lastmod>
+    <loc>http://sascezar.github.io/authors/</loc>
+    <lastmod>2020-04-14T18:49:36+02:00</lastmod>
   </url>
   
   <url>
-    <loc>/post/</loc>
-    <lastmod>2019-09-05T00:00:00+00:00</lastmod>
+    <loc>http://sascezar.github.io/categories/</loc>
+    <lastmod>2020-04-14T18:49:36+02:00</lastmod>
   </url>
   
   <url>
-    <loc>/post/aawriting-technical-content/</loc>
-    <lastmod>2019-07-12T00:00:00+00:00</lastmod>
+    <loc>http://sascezar.github.io/tags/introduction/</loc>
+    <lastmod>2020-04-14T18:49:36+02:00</lastmod>
   </url>
   
   <url>
-    <loc>/post/writing-technical-content-another-copy/</loc>
-    <lastmod>2019-07-12T00:00:00+00:00</lastmod>
+    <loc>http://sascezar.github.io/categories/lectures/</loc>
+    <lastmod>2020-04-14T18:49:36+02:00</lastmod>
   </url>
   
   <url>
-    <loc>/post/writing-technical-content-copy/</loc>
-    <lastmod>2019-07-12T00:00:00+00:00</lastmod>
+    <loc>http://sascezar.github.io/tags/neural-network/</loc>
+    <lastmod>2020-04-14T18:49:36+02:00</lastmod>
   </url>
   
   <url>
-    <loc>/post/writing-technical-content/</loc>
-    <lastmod>2019-07-12T00:00:00+00:00</lastmod>
+    <loc>http://sascezar.github.io/post/neural-network/</loc>
+    <lastmod>2020-04-14T18:49:36+02:00</lastmod>
   </url>
   
   <url>
-    <loc>/courses/</loc>
-    <lastmod>2019-05-05T00:00:00+01:00</lastmod>
+    <loc>http://sascezar.github.io/tags/</loc>
+    <lastmod>2020-04-14T18:49:36+02:00</lastmod>
   </url>
   
   <url>
-    <loc>/publication_types/3/</loc>
-    <lastmod>2019-04-07T00:00:00+00:00</lastmod>
+    <loc>http://sascezar.github.io/post/</loc>
+    <lastmod>2020-04-05T20:01:19+02:00</lastmod>
   </url>
   
   <url>
-    <loc>/authors/admin/</loc>
-    <lastmod>2019-09-05T00:00:00+00:00</lastmod>
+    <loc>http://sascezar.github.io/publication_types/1/</loc>
+    <lastmod>2020-04-05T20:01:19+02:00</lastmod>
   </url>
   
   <url>
-    <loc>/publication/preprint/</loc>
-    <lastmod>2019-04-07T00:00:00+00:00</lastmod>
+    <loc>http://sascezar.github.io/publication_types/2/</loc>
+    <lastmod>2020-04-05T20:01:19+02:00</lastmod>
   </url>
   
   <url>
-    <loc>/authors/</loc>
-    <lastmod>2019-09-05T00:00:00+00:00</lastmod>
+    <loc>http://sascezar.github.io/publication_types/3/</loc>
+    <lastmod>2020-04-05T20:01:19+02:00</lastmod>
   </url>
   
   <url>
-    <loc>/publication_types/</loc>
-    <lastmod>2019-04-07T00:00:00+00:00</lastmod>
+    <loc>http://sascezar.github.io/authors/admin/</loc>
+    <lastmod>2020-04-05T20:01:19+02:00</lastmod>
   </url>
   
   <url>
-    <loc>/publication/</loc>
-    <lastmod>2019-04-07T00:00:00+00:00</lastmod>
+    <loc>http://sascezar.github.io/publication/conference-paper/</loc>
+    <lastmod>2020-04-05T20:01:19+02:00</lastmod>
   </url>
   
   <url>
-    <loc>/tags/source-themes/</loc>
-    <lastmod>2019-04-07T00:00:00+00:00</lastmod>
+    <loc>http://sascezar.github.io/publication/journal-article/</loc>
+    <lastmod>2020-04-05T20:01:19+02:00</lastmod>
   </url>
   
   <url>
-    <loc>/tags/</loc>
-    <lastmod>2019-04-17T00:00:00+00:00</lastmod>
+    <loc>http://sascezar.github.io/publication/preprint/</loc>
+    <lastmod>2020-04-05T20:01:19+02:00</lastmod>
   </url>
   
   <url>
-    <loc>/post/bajupyter-another-copy/</loc>
-    <lastmod>2019-09-05T00:00:00+00:00</lastmod>
+    <loc>http://sascezar.github.io/home/</loc>
+    <lastmod>2020-04-05T20:01:19+02:00</lastmod>
   </url>
   
   <url>
-    <loc>/post/jupyter-3rd-copy/</loc>
-    <lastmod>2019-09-05T00:00:00+00:00</lastmod>
+    <loc>http://sascezar.github.io/</loc>
+    <lastmod>2020-04-05T20:01:19+02:00</lastmod>
   </url>
   
   <url>
-    <loc>/post/jupyter-copy/</loc>
-    <lastmod>2019-09-05T00:00:00+00:00</lastmod>
+    <loc>http://sascezar.github.io/courses/</loc>
+    <lastmod>2020-04-05T20:01:19+02:00</lastmod>
   </url>
   
   <url>
-    <loc>/post/jupyter/</loc>
-    <lastmod>2019-09-05T00:00:00+00:00</lastmod>
+    <loc>http://sascezar.github.io/tags/deep-learning/</loc>
+    <lastmod>2020-04-05T20:01:19+02:00</lastmod>
   </url>
   
   <url>
-    <loc>/slides/</loc>
-    <lastmod>2019-02-05T00:00:00+00:00</lastmod>
+    <loc>http://sascezar.github.io/tags/demo/</loc>
+    <lastmod>2020-04-05T20:01:19+02:00</lastmod>
   </url>
   
   <url>
-    <loc>/slides/example/</loc>
-    <lastmod>2019-02-05T00:00:00+00:00</lastmod>
+    <loc>http://sascezar.github.io/talk/example/</loc>
+    <lastmod>2020-04-05T20:01:19+02:00</lastmod>
   </url>
   
   <url>
-    <loc>/home/</loc>
-    <lastmod>2019-01-01T00:00:00+00:00</lastmod>
+    <loc>http://sascezar.github.io/project/external-project/</loc>
+    <lastmod>2020-04-05T20:01:19+02:00</lastmod>
   </url>
   
   <url>
-    <loc>/</loc>
-    <lastmod>2019-01-01T00:00:00+00:00</lastmod>
+    <loc>http://sascezar.github.io/project/internal-project/</loc>
+    <lastmod>2020-04-05T20:01:19+02:00</lastmod>
   </url>
   
   <url>
-    <loc>/bio/</loc>
-    <lastmod>2019-01-01T00:00:00+00:00</lastmod>
+    <loc>http://sascezar.github.io/bio/</loc>
+    <lastmod>2020-04-05T20:01:19+02:00</lastmod>
   </url>
   
   <url>
-    <loc>/tags/deep-learning/</loc>
-    <lastmod>2016-04-27T00:00:00+00:00</lastmod>
+    <loc>http://sascezar.github.io/project/</loc>
+    <lastmod>2020-04-05T20:01:19+02:00</lastmod>
   </url>
   
   <url>
-    <loc>/tags/demo/</loc>
-    <lastmod>2016-04-27T00:00:00+00:00</lastmod>
+    <loc>http://sascezar.github.io/publication_types/</loc>
+    <lastmod>2020-04-05T20:01:19+02:00</lastmod>
   </url>
   
   <url>
-    <loc>/project/external-project/</loc>
-    <lastmod>2016-04-27T00:00:00+00:00</lastmod>
+    <loc>http://sascezar.github.io/publication/</loc>
+    <lastmod>2020-04-05T20:01:19+02:00</lastmod>
   </url>
   
   <url>
-    <loc>/project/internal-project/</loc>
-    <lastmod>2016-04-27T00:00:00+00:00</lastmod>
+    <loc>http://sascezar.github.io/talk/</loc>
+    <lastmod>2020-04-05T20:01:19+02:00</lastmod>
   </url>
   
   <url>
-    <loc>/project/</loc>
-    <lastmod>2016-04-27T00:00:00+00:00</lastmod>
+    <loc>http://sascezar.github.io/authors/robert-ford/</loc>
+    <lastmod>2020-04-05T20:01:19+02:00</lastmod>
   </url>
   
   <url>
-    <loc>/tags/academic/</loc>
-    <lastmod>2019-04-17T00:00:00+00:00</lastmod>
+    <loc>http://sascezar.github.io/slides/</loc>
+    <lastmod>2020-04-05T20:01:19+02:00</lastmod>
   </url>
   
   <url>
-    <loc>/post/getting-started-another-copy/</loc>
-    <lastmod>2019-04-17T00:00:00+00:00</lastmod>
+    <loc>http://sascezar.github.io/slides/example/</loc>
+    <lastmod>2020-04-05T20:01:19+02:00</lastmod>
   </url>
   
   <url>
-    <loc>/post/getting-started-copy/</loc>
-    <lastmod>2019-04-17T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>/post/zzagetting-started/</loc>
-    <lastmod>2019-04-17T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>/categories/</loc>
-    <lastmod>2019-04-17T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>/categories/demo/</loc>
-    <lastmod>2019-04-17T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>/publication_types/2/</loc>
-    <lastmod>2015-09-01T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>/publication/journal-article/</loc>
-    <lastmod>2015-09-01T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>/authors/robert-ford/</loc>
-    <lastmod>2015-09-01T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>/publication_types/1/</loc>
-    <lastmod>2013-07-01T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>/publication/conference-paper/</loc>
-    <lastmod>2013-07-01T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>/post/getting-started/</loc>
-    <lastmod>2019-04-17T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>/authors/cezarsas/</loc>
+    <loc>http://sascezar.github.io/tags/source-themes/</loc>
+    <lastmod>2020-04-05T20:01:19+02:00</lastmod>
   </url>
   
 </urlset>
