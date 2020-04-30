@@ -5,7 +5,7 @@
     <link>http://sascezar.github.io/tags/principal-component-analysis/</link>
       <atom:link href="http://sascezar.github.io/tags/principal-component-analysis/index.xml" rel="self" type="application/rss+xml" />
     <description>Principal Component Analysis</description>
-    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>Copyright Cezar Sas - 2020</copyright><lastBuildDate>Thu, 30 Apr 2020 21:05:54 +0200</lastBuildDate>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>Copyright Cezar Sas - 2020</copyright><lastBuildDate>Thu, 30 Apr 2020 22:19:46 +0200</lastBuildDate>
     <image>
       <url>img/map[gravatar:%!s(bool=false) shape:circle]</url>
       <title>Principal Component Analysis</title>
@@ -15,22 +15,22 @@
     <item>
       <title>Principal Component Analysis (PCA)</title>
       <link>http://sascezar.github.io/post/pca/</link>
-      <pubDate>Thu, 30 Apr 2020 21:05:54 +0200</pubDate>
+      <pubDate>Thu, 30 Apr 2020 22:19:46 +0200</pubDate>
       <guid>http://sascezar.github.io/post/pca/</guid>
       <description>&lt;p&gt;In some situations, when working with machine learning models, we have to deal with high dimensional data. This brings various problems to the table, from higher computational time, to higer complexity required by the model to describe the data (check 
-&lt;a href=&#34;https://en.wikipedia.org/wiki/Curse_of_dimensionality&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Curse of Dimensionality&lt;/a&gt;). In order to solve this problem, various techniques to reduce the dimensionality of data have been proprosed, one of them is called Principal Component Analysis (PCA). PCA is a technique that can be used for different application, from dimensionality reduction and feature extraction to lossy data compression and data visualization. In this article, we will present the concepts behide this method, and then present two implementations in Python from scratch.&lt;/p&gt;
-&lt;h4 id=&#34;description&#34;&gt;Description&lt;/h4&gt;
-&lt;h4 id=&#34;formal-definition&#34;&gt;Formal Definition&lt;/h4&gt;
-&lt;p&gt;For the formal definition, we will present the Singular Value Decomposition (SVD)formalization, as it is some stable and general compared to the Eigendecomposition, however, you can check the implementation section to get an idea of the differences.&lt;/p&gt;
+&lt;a href=&#34;https://en.wikipedia.org/wiki/Curse_of_dimensionality&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Curse of Dimensionality&lt;/a&gt;). In order to solve this problem, various techniques to reduce the dimensionality of data have been proposed, one of them is called Principal Component Analysis (PCA). PCA is a technique that can be used for different application, from dimensionality reduction and feature extraction to lossy data compression and data visualization. In this article, we will present the concepts behide this method, and then present two implementations in Python from scratch.&lt;/p&gt;
+&lt;h3 id=&#34;description&#34;&gt;Description&lt;/h3&gt;
+&lt;p&gt;Principal Component Anlysis is a linear transformation that transforms data into a new orthogonal space spanned by the vectors called principal components axes. These axes are found by searching for the vectors that model the higest variance in the data. The first axis is the one with the highest variance, the last one with the lowest variance.&lt;/p&gt;
+&lt;h3 id=&#34;formal-definition&#34;&gt;Formal Definition&lt;/h3&gt;
+&lt;p&gt;For the formal definition, we will present the Singular Value Decomposition (SVD) formalization, as it is some stable and general compared to the Eigendecomposition, however, you can check the implementation section to get an idea of the differences.&lt;/p&gt;
 &lt;p&gt;Let $\mathbf{X} \in \mathbb{R}^{n \times d}$ be the observation matrix. The first step is to center the data by removing the mean $\mathbf{X}&amp;rsquo; = \mathbf{M X}$, where $\mathbf{M}$ is the 
-&lt;a href=&#34;https://en.wikipedia.org/wiki/Centering_matrix&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Centering Matrix&lt;/a&gt;.
-Then, we need to perform Singular Value Decomposition on $\mathbf{X}&#39;$, obtaining&lt;sup id=&#34;fnref:1&#34;&gt;&lt;a href=&#34;#fn:1&#34; class=&#34;footnote-ref&#34; role=&#34;doc-noteref&#34;&gt;1&lt;/a&gt;&lt;/sup&gt;:&lt;/p&gt;
+&lt;a href=&#34;https://en.wikipedia.org/wiki/Centering_matrix&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Centering Matrix&lt;/a&gt;. Then, we perform SVD on $\mathbf{X}&#39;$, obtaining&lt;sup id=&#34;fnref:1&#34;&gt;&lt;a href=&#34;#fn:1&#34; class=&#34;footnote-ref&#34; role=&#34;doc-noteref&#34;&gt;1&lt;/a&gt;&lt;/sup&gt;:&lt;/p&gt;
 &lt;p&gt;$$\mathbf{X&amp;rsquo;} = \mathbf{U\Sigma V}^\top$$&lt;/p&gt;
 &lt;p&gt;The covariance matrix $\mathbf{C}$ is given by:&lt;/p&gt;
 &lt;p&gt;$$\mathbf{C} = \frac{1}{N-1}\mathbf{X&#39;^\top X&amp;rsquo;}$$
-Which, by pluging in the SVD of $\mathbf{X}&#39;$, becomes:
+which, by pluging in the SVD of $\mathbf{X}&#39;$, becomes:
 $$\mathbf{C} = \frac{1}{N-1} \mathbf{V\Sigma U}^\top \mathbf{U\Sigma V}^\top$$
-Since $\mathbf{U}$ is orthogonal:
+since $\mathbf{U}$ is orthogonal:
 $$\mathbf{C} = \frac{1}{N-1}\mathbf{V\Sigma}^2\mathbf{V}^\top$$&lt;/p&gt;
 &lt;p&gt;The singular vectors $\mathbf{V}$ are the principal axes, sometimes they are alse refered to as principal diration or even principal components.  To get the principal components, also called principal component scores, we projet the input onto the principal axes:
 $$\mathbf{X}&#39;\mathbf{V}^\top$$&lt;/p&gt;
@@ -40,8 +40,8 @@ $$\mathbf{X}&#39;\mathbf{V} = \mathbf{U\Sigma V}^\top \mathbf{V} = \mathbf{U\Sig
 &lt;p&gt;The explained variance of each principal component is defined by:&lt;/p&gt;
 &lt;p&gt;$$\sigma = \frac{\mathbf{\Sigma}^2}{N-1}$$&lt;/p&gt;
 &lt;p&gt;To perform dimensionality reduction, to a size $k \lt d$, we then can pick a the first $k$ rows of $\mathbf{V}$, and to have the variance of these principal components a the first $k$ elements of the diagonal of $\sigma$. Then we can project $\mathbf{X}&#39;$ onto the reduced space using the new $\mathbf{V}$.&lt;/p&gt;
-&lt;h4 id=&#34;conclusions&#34;&gt;Conclusions&lt;/h4&gt;
-&lt;h2 id=&#34;implementation-from-scratch&#34;&gt;Implementation from Scratch&lt;/h2&gt;
+&lt;h3 id=&#34;conclusions&#34;&gt;Conclusions&lt;/h3&gt;
+&lt;h1 id=&#34;implementation-from-scratch&#34;&gt;Implementation from Scratch&lt;/h1&gt;
 &lt;p&gt;For the implementation, we will create an abstract class with an interface similar to the one provided by the sklearn library (if you are not familiar with abstract classes check 
 &lt;a href=&#34;https://www.geeksforgeeks.org/abstract-classes-in-python/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;this&lt;/a&gt; link). We will use this class as a base for our two solutions that use the previously described methods to compute the PCA.&lt;/p&gt;
 &lt;pre&gt;&lt;code&gt;class PCA(ABC):
