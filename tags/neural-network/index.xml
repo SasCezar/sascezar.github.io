@@ -5,7 +5,7 @@
     <link>http://sascezar.github.io/tags/neural-network/</link>
       <atom:link href="http://sascezar.github.io/tags/neural-network/index.xml" rel="self" type="application/rss+xml" />
     <description>Neural Network</description>
-    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>Copyright Cezar Sas - 2020</copyright><lastBuildDate>Tue, 14 Apr 2020 18:49:36 +0200</lastBuildDate>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>Copyright Cezar Sas - 2020</copyright><lastBuildDate>Thu, 30 Apr 2020 16:03:47 +0200</lastBuildDate>
     <image>
       <url>img/map[gravatar:%!s(bool=false) shape:circle]</url>
       <title>Neural Network</title>
@@ -15,7 +15,7 @@
     <item>
       <title>Neural Networks</title>
       <link>http://sascezar.github.io/post/neural-network/</link>
-      <pubDate>Tue, 14 Apr 2020 18:49:36 +0200</pubDate>
+      <pubDate>Thu, 30 Apr 2020 16:03:47 +0200</pubDate>
       <guid>http://sascezar.github.io/post/neural-network/</guid>
       <description>&lt;p&gt;A Neural Network (NN) is a computational model inspired by networks of
 biological neurons, wherein the neurons compute output values from inputs.
@@ -55,8 +55,8 @@ $\mathcal{L}$ for all the examples. The error function computes the
 difference between the predicted value $\hat{y} = h_{\theta}(x)$ and the
 actual value $y$. We also have a regularizer term $\Omega$ that is
 weighted by the hyperparameter $\lambda$:&lt;/p&gt;
-&lt;p&gt;$$\min_{\theta} J(\theta) = - \frac{1}{N} \sum_{1}^{N} \mathcal{L}(y_i, \hat{y_i}) + \lambda \Omega_\theta$$
-Now that we have defined what is the goal of our neural network, we can
+&lt;p&gt;$$\min_{\theta} J(\theta) = - \frac{1}{N} \sum_{1}^{N} \mathcal{L}(y_i, \hat{y_i}) + \lambda \Omega_\theta$$&lt;/p&gt;
+&lt;p&gt;Now that we have defined what is the goal of our neural network, we can
 start performing the training. The weights $\theta$ in the network are
 the only parameters that can be modified to make the cost function $J$
 as low as possible; thus we can minimize $J$ by using an iterative
@@ -71,11 +71,8 @@ the gradients from the output of the networks and moves backward to the
 input through all layers. First, we need to compute the derivative of
 $J(\theta)$ w.r.t the output, this will be our $\partial^{L}$, then go
 backward:&lt;/p&gt;
-&lt;p&gt;$$\begin{split}
-\partial^{L} &amp;amp; = \frac{\partial}{\partial y} \mathcal{L}(y, \hat{y}) \&lt;br&gt;
-\partial^i &amp;amp;= {\theta^{i}}^\intercal \partial^{i+1} \odot \left(\frac{\partial}{\partial z^{i}} g(z^i)\right)
-\end{split}
-\label{eq:backpropagation}$$&lt;/p&gt;
+&lt;p&gt;$$\partial^{L} = \frac{\partial}{\partial y} \mathcal{L}(y, \hat{y})$$&lt;/p&gt;
+&lt;p&gt;$$\partial^i = {\theta^{i}}^\intercal \partial^{i+1} \odot \left(\frac{\partial}{\partial z^{i}} g(z^i)\right)$$&lt;/p&gt;
 &lt;p&gt;For each layer, the computed gradients are then used to update the
 corresponding parameters using 
 &lt;a href=&#34;https://en.wikipedia.org/wiki/Gradient_descent&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;gradient descent&lt;/a&gt;.&lt;/p&gt;

@@ -1,92 +1,16 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Introduction | Cezar Sas</title>
-    <link>http://sascezar.github.io/tags/introduction/</link>
-      <atom:link href="http://sascezar.github.io/tags/introduction/index.xml" rel="self" type="application/rss+xml" />
-    <description>Introduction</description>
+    <title>Principal Component Analysis | Cezar Sas</title>
+    <link>http://sascezar.github.io/tags/principal-component-analysis/</link>
+      <atom:link href="http://sascezar.github.io/tags/principal-component-analysis/index.xml" rel="self" type="application/rss+xml" />
+    <description>Principal Component Analysis</description>
     <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>Copyright Cezar Sas - 2020</copyright><lastBuildDate>Thu, 30 Apr 2020 16:03:47 +0200</lastBuildDate>
     <image>
       <url>img/map[gravatar:%!s(bool=false) shape:circle]</url>
-      <title>Introduction</title>
-      <link>http://sascezar.github.io/tags/introduction/</link>
+      <title>Principal Component Analysis</title>
+      <link>http://sascezar.github.io/tags/principal-component-analysis/</link>
     </image>
-    
-    <item>
-      <title>Neural Networks</title>
-      <link>http://sascezar.github.io/post/neural-network/</link>
-      <pubDate>Thu, 30 Apr 2020 16:03:47 +0200</pubDate>
-      <guid>http://sascezar.github.io/post/neural-network/</guid>
-      <description>&lt;p&gt;A Neural Network (NN) is a computational model inspired by networks of
-biological neurons, wherein the neurons compute output values from inputs.
-The simplest form of neural network is the feed forward neural
-network, in which the information flows only in one direction, and there
-is no recurrent connection between the nodes. Neural networks try to
-approximate some function $f^{*}$ by defining a mapping $y = f(x; W)$
-for an input $x$ by learning the value of the parameters $W$ that yield
-the best function approximation. A neural network is called network
-because it contains multiple layers of artificial neurons.
-The artificial neuron is the building block of neural networks.&lt;/p&gt;
-&lt;p&gt;A neuron is defined by an input $x$, a set of weights $W$, a bias $b$,
-and an activation function $g$. The activation function should be
-differentiable, since to actually learn, we need to compute derivatives.
-With $x, W \in \mathbb{R}^{n\times1}$, $b \in \mathbb{R}$.
-The output $y$ is defined as:&lt;/p&gt;
-&lt;p&gt;$$y = g(W^{\intercal} x + b)$$&lt;/p&gt;
-&lt;p&gt;Feed forward neural networks are composed by various layers, each layer
-contains some neurons. The formal definition is very similar to the one
-of the neuron. To simplify the notation, we include the bias term in the
-weights matrix, and have an extra element $x_0 = 1$ in the input $x$.
-Given a feed forward neural network with $L$ layers, the forward propagation is:&lt;/p&gt;
-&lt;p&gt;$$y = f^{k}(W_{k}^{\intercal} * \dots f^{2}(W_{2}^{\intercal} * f^{1}(W_{1}^{\intercal} * x)) \dots)$$&lt;/p&gt;
-&lt;p&gt;$$z^i = W^{i-1}a^{i-1}$$&lt;/p&gt;
-&lt;p&gt;$$a^{i} = g(z^i)$$&lt;/p&gt;
-&lt;p&gt;$$y = a^L g(z^L)$$&lt;/p&gt;
-&lt;p&gt;Where $g$ is an activation function, $a^i$ is the activation of layer
-$i$, and $a^0 = x$. The weight matrix $W_i$ controls the projection from
-layer $i$ to layer $i+1$. Given a network with $s_i$ units in layer $i$,
-and $s_{i+1}$ in layer $i+1$ the weight matrix
-$W_i \in\mathbb{R}^{(s_{i+1})\times (s_i + 1)}$.&lt;/p&gt;
-&lt;p&gt;As in other machine learning algorithms, we have to learn the parameters
-of our neural network. We have a cost function, or objective function,
-$J(\theta)$ that we try to minimize. Given a neural network $h_\theta$,
-we compute our cost function as a sum of the error function
-$\mathcal{L}$ for all the examples. The error function computes the
-difference between the predicted value $\hat{y} = h_{\theta}(x)$ and the
-actual value $y$. We also have a regularizer term $\Omega$ that is
-weighted by the hyperparameter $\lambda$:&lt;/p&gt;
-&lt;p&gt;$$\min_{\theta} J(\theta) = - \frac{1}{N} \sum_{1}^{N} \mathcal{L}(y_i, \hat{y_i}) + \lambda \Omega_\theta$$&lt;/p&gt;
-&lt;p&gt;Now that we have defined what is the goal of our neural network, we can
-start performing the training. The weights $\theta$ in the network are
-the only parameters that can be modified to make the cost function $J$
-as low as possible; thus we can minimize $J$ by using an iterative
-process of gradient descent, for which we need to calculate the gradient
-for the cost function with respect to the network parameters. As each
-network consists of various layers, computing the gradient of the loss
-function w.r.t the parameters $\frac{\partial J}{\partial \theta}$ is
-non-trivial. To estimate the gradient, an algorithm called
-backpropagation &lt;sup id=&#34;fnref:1&#34;&gt;&lt;a href=&#34;#fn:1&#34; class=&#34;footnote-ref&#34; role=&#34;doc-noteref&#34;&gt;1&lt;/a&gt;&lt;/sup&gt;, from backward propagation of
-errors, is used. As the name implies, backpropagation starts computing
-the gradients from the output of the networks and moves backward to the
-input through all layers. First, we need to compute the derivative of
-$J(\theta)$ w.r.t the output, this will be our $\partial^{L}$, then go
-backward:&lt;/p&gt;
-&lt;p&gt;$$\partial^{L} = \frac{\partial}{\partial y} \mathcal{L}(y, \hat{y})$$&lt;/p&gt;
-&lt;p&gt;$$\partial^i = {\theta^{i}}^\intercal \partial^{i+1} \odot \left(\frac{\partial}{\partial z^{i}} g(z^i)\right)$$&lt;/p&gt;
-&lt;p&gt;For each layer, the computed gradients are then used to update the
-corresponding parameters using 
-&lt;a href=&#34;https://en.wikipedia.org/wiki/Gradient_descent&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;gradient descent&lt;/a&gt;.&lt;/p&gt;
-&lt;section class=&#34;footnotes&#34; role=&#34;doc-endnotes&#34;&gt;
-&lt;hr&gt;
-&lt;ol&gt;
-&lt;li id=&#34;fn:1&#34; role=&#34;doc-endnote&#34;&gt;
-&lt;p&gt;Rumelhart, David E., Geoffrey E. Hinton, and Ronald J. Williams. &amp;ldquo;
-&lt;a href=&#34;https://www.nature.com/articles/323533a0&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Learning representations by back-propagating errors.&lt;/a&gt;&amp;rdquo; Nature 323.6088 (1986): 533-536. &lt;a href=&#34;#fnref:1&#34; class=&#34;footnote-backref&#34; role=&#34;doc-backlink&#34;&gt;&amp;#x21a9;&amp;#xfe0e;&lt;/a&gt;&lt;/p&gt;
-&lt;/li&gt;
-&lt;/ol&gt;
-&lt;/section&gt;
-</description>
-    </item>
     
     <item>
       <title>Principal Component Analysis (PCA)</title>

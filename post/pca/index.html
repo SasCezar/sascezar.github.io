@@ -28,10 +28,10 @@
   
     
   
-  <meta name="description" content="A Neural Network (NN) is a computational model inspired by networks of biological neurons, wherein the neurons compute output values from inputs.">
+  <meta name="description" content="Many times, when dealing with machine learning tasks, we have to deal with high dimensional data.">
 
   
-  <link rel="alternate" hreflang="en-us" href="http://sascezar.github.io/post/neural-network/">
+  <link rel="alternate" hreflang="en-us" href="http://sascezar.github.io/post/pca/">
 
   
 
@@ -218,7 +218,7 @@
   <link rel="icon" type="image/png" href="/images/icon_hu0b7a4cb9992c9ac0e91bd28ffd38dd00_9727_32x32_fill_lanczos_center_2.png">
   <link rel="apple-touch-icon" type="image/png" href="/images/icon_hu0b7a4cb9992c9ac0e91bd28ffd38dd00_9727_192x192_fill_lanczos_center_2.png">
 
-  <link rel="canonical" href="http://sascezar.github.io/post/neural-network/">
+  <link rel="canonical" href="http://sascezar.github.io/post/pca/">
 
   
   
@@ -234,10 +234,10 @@
   <meta property="twitter:creator" content="@CezarSas">
   
   <meta property="og:site_name" content="Cezar Sas">
-  <meta property="og:url" content="http://sascezar.github.io/post/neural-network/">
-  <meta property="og:title" content="Neural Networks | Cezar Sas">
-  <meta property="og:description" content="A Neural Network (NN) is a computational model inspired by networks of biological neurons, wherein the neurons compute output values from inputs."><meta property="og:image" content="http://sascezar.github.io/post/neural-network/featured.jpg">
-  <meta property="twitter:image" content="http://sascezar.github.io/post/neural-network/featured.jpg"><meta property="og:locale" content="en-us">
+  <meta property="og:url" content="http://sascezar.github.io/post/pca/">
+  <meta property="og:title" content="Principal Component Analysis (PCA) | Cezar Sas">
+  <meta property="og:description" content="Many times, when dealing with machine learning tasks, we have to deal with high dimensional data."><meta property="og:image" content="http://sascezar.github.io/post/pca/featured.jpg">
+  <meta property="twitter:image" content="http://sascezar.github.io/post/pca/featured.jpg"><meta property="og:locale" content="en-us">
   
     
       <meta property="article:published_time" content="2020-04-30T16:03:47&#43;02:00">
@@ -266,12 +266,12 @@
   "@type": "BlogPosting",
   "mainEntityOfPage": {
     "@type": "WebPage",
-    "@id": "http://sascezar.github.io/post/neural-network/"
+    "@id": "http://sascezar.github.io/post/pca/"
   },
-  "headline": "Neural Networks",
+  "headline": "Principal Component Analysis (PCA)",
   
   "image": [
-    "http://sascezar.github.io/post/neural-network/featured.jpg"
+    "http://sascezar.github.io/post/pca/featured.jpg"
   ],
   
   "datePublished": "0001-01-01T00:00:00Z",
@@ -290,7 +290,7 @@
       "url": "http://sascezar.github.io/images/icon_hu0b7a4cb9992c9ac0e91bd28ffd38dd00_9727_192x192_fill_lanczos_center_2.png"
     }
   },
-  "description": "A Neural Network (NN) is a computational model inspired by networks of biological neurons, wherein the neurons compute output values from inputs."
+  "description": "Many times, when dealing with machine learning tasks, we have to deal with high dimensional data."
 }
 </script>
 
@@ -308,7 +308,7 @@
 
 
 
-  <title>Neural Networks | Cezar Sas</title>
+  <title>Principal Component Analysis (PCA) | Cezar Sas</title>
 
 </head>
 
@@ -492,10 +492,10 @@
 
 
 <div class="article-container pt-3">
-  <h1>Neural Networks</h1>
+  <h1>Principal Component Analysis (PCA)</h1>
 
   
-  <p class="page-subtitle">A quick formal introduction to Artificial Neural Networks (NN)</p>
+  <p class="page-subtitle">What is and what&rsquo;s behind it</p>
   
 
   
@@ -539,7 +539,7 @@
   
   
   <span class="middot-divider"></span>
-  <a href="/post/neural-network/#disqus_thread"></a>
+  <a href="/post/pca/#disqus_thread"></a>
   
 
   
@@ -571,7 +571,7 @@
 
 <div class="article-header container-fluid featured-image-wrapper mt-4 mb-4" style="max-width: 2144px; max-height: 1206px;">
   <div style="position: relative">
-    <img src="/post/neural-network/featured.jpg" alt="" class="featured-image">
+    <img src="/post/pca/featured.jpg" alt="" class="featured-image">
     <span class="article-header-caption">Image credit: <a href="https://unsplash.com/photos/CpkOjOcXdUY"><strong>Unsplash</strong></a></span>
   </div>
 </div>
@@ -581,74 +581,102 @@
   <div class="article-container">
 
     <div class="article-style">
-      <p>A Neural Network (NN) is a computational model inspired by networks of
-biological neurons, wherein the neurons compute output values from inputs.
-The simplest form of neural network is the feed forward neural
-network, in which the information flows only in one direction, and there
-is no recurrent connection between the nodes. Neural networks try to
-approximate some function $f^{*}$ by defining a mapping $y = f(x; W)$
-for an input $x$ by learning the value of the parameters $W$ that yield
-the best function approximation. A neural network is called network
-because it contains multiple layers of artificial neurons.
-The artificial neuron is the building block of neural networks.</p>
-<p>A neuron is defined by an input $x$, a set of weights $W$, a bias $b$,
-and an activation function $g$. The activation function should be
-differentiable, since to actually learn, we need to compute derivatives.
-With $x, W \in \mathbb{R}^{n\times1}$, $b \in \mathbb{R}$.
-The output $y$ is defined as:</p>
-<p>$$y = g(W^{\intercal} x + b)$$</p>
-<p>Feed forward neural networks are composed by various layers, each layer
-contains some neurons. The formal definition is very similar to the one
-of the neuron. To simplify the notation, we include the bias term in the
-weights matrix, and have an extra element $x_0 = 1$ in the input $x$.
-Given a feed forward neural network with $L$ layers, the forward propagation is:</p>
-<p>$$y = f^{k}(W_{k}^{\intercal} * \dots f^{2}(W_{2}^{\intercal} * f^{1}(W_{1}^{\intercal} * x)) \dots)$$</p>
-<p>$$z^i = W^{i-1}a^{i-1}$$</p>
-<p>$$a^{i} = g(z^i)$$</p>
-<p>$$y = a^L g(z^L)$$</p>
-<p>Where $g$ is an activation function, $a^i$ is the activation of layer
-$i$, and $a^0 = x$. The weight matrix $W_i$ controls the projection from
-layer $i$ to layer $i+1$. Given a network with $s_i$ units in layer $i$,
-and $s_{i+1}$ in layer $i+1$ the weight matrix
-$W_i \in\mathbb{R}^{(s_{i+1})\times (s_i + 1)}$.</p>
-<p>As in other machine learning algorithms, we have to learn the parameters
-of our neural network. We have a cost function, or objective function,
-$J(\theta)$ that we try to minimize. Given a neural network $h_\theta$,
-we compute our cost function as a sum of the error function
-$\mathcal{L}$ for all the examples. The error function computes the
-difference between the predicted value $\hat{y} = h_{\theta}(x)$ and the
-actual value $y$. We also have a regularizer term $\Omega$ that is
-weighted by the hyperparameter $\lambda$:</p>
-<p>$$\min_{\theta} J(\theta) = - \frac{1}{N} \sum_{1}^{N} \mathcal{L}(y_i, \hat{y_i}) + \lambda \Omega_\theta$$</p>
-<p>Now that we have defined what is the goal of our neural network, we can
-start performing the training. The weights $\theta$ in the network are
-the only parameters that can be modified to make the cost function $J$
-as low as possible; thus we can minimize $J$ by using an iterative
-process of gradient descent, for which we need to calculate the gradient
-for the cost function with respect to the network parameters. As each
-network consists of various layers, computing the gradient of the loss
-function w.r.t the parameters $\frac{\partial J}{\partial \theta}$ is
-non-trivial. To estimate the gradient, an algorithm called
-backpropagation <sup id="fnref:1"><a href="#fn:1" class="footnote-ref" role="doc-noteref">1</a></sup>, from backward propagation of
-errors, is used. As the name implies, backpropagation starts computing
-the gradients from the output of the networks and moves backward to the
-input through all layers. First, we need to compute the derivative of
-$J(\theta)$ w.r.t the output, this will be our $\partial^{L}$, then go
-backward:</p>
-<p>$$\partial^{L} = \frac{\partial}{\partial y} \mathcal{L}(y, \hat{y})$$</p>
-<p>$$\partial^i = {\theta^{i}}^\intercal \partial^{i+1} \odot \left(\frac{\partial}{\partial z^{i}} g(z^i)\right)$$</p>
-<p>For each layer, the computed gradients are then used to update the
-corresponding parameters using 
-<a href="https://en.wikipedia.org/wiki/Gradient_descent" target="_blank" rel="noopener">gradient descent</a>.</p>
-<section class="footnotes" role="doc-endnotes">
-<hr>
-<ol>
-<li id="fn:1" role="doc-endnote">
-<p>Rumelhart, David E., Geoffrey E. Hinton, and Ronald J. Williams. &ldquo;
-<a href="https://www.nature.com/articles/323533a0" target="_blank" rel="noopener">Learning representations by back-propagating errors.</a>&rdquo; Nature 323.6088 (1986): 533-536. <a href="#fnref:1" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
-</li>
-</ol>
-</section>
+      <p>Many times, when dealing with machine learning tasks, we have to deal with high dimensional data. However, this brings various problems, from higher computational time, to higer complexity required by the model
+to describe the data (check 
+<a href="https://en.wikipedia.org/wiki/Curse_of_dimensionality" target="_blank" rel="noopener">Curse of Dimensionality</a>). In order to solve this problem, various techniques to reduce the dimensionality
+of data have been proprosed. One of them is called Principal Component Analysis, and it&rsquo;s a technique that van be used for different application, from dimensionality reduction and feature
+extraction to lossy data compression and data visualization. In this article, we will present the concepts behide this method, and then present two implementations in Python from scratch.</p>
+<h4 id="description">Description</h4>
+<h4 id="formal-definition">Formal Definition</h4>
+<p>For the formal definition, we will focus on the Singular Value Decomposition formalization, as it is some stable and general compared to the Eigendecomposition, however, you can check the implementation section to get an idea of how .</p>
+<p>Let $\mathbf{X} \in \mathbb{R}^{(N \times D)}$ be the observation matrix. The first step is to center the data by removing the mean $\mathbf{X}&rsquo; = C_D\mathbf{X}$, where $C_D$ is the 
+<a href="https://en.wikipedia.org/wiki/Centering_matrix" target="_blank" rel="noopener">Centering Matrix</a>.
+Then, we need to perform Singular Value Decomposition on $\mathbf{X}&lsquo;$, obtaining:</p>
+<p>$$\mathbf{X&rsquo;} = \mathbf{USV}^\top$$</p>
+<p>The covariance matrix $\mathbf{C}$ is given by:</p>
+<p>$$\mathbf{C} = \frac{1}{N-1}\mathbf{X'^\top X&rsquo;}$$
+$$\mathbf{C} = \frac{1}{N-1}\mathbf{U\Sigma V}^\top \mathbf{V\Sigma U}^\top$$
+Since $\mathbf{V}$ is orthogonal:
+$$\mathbf{C} = \frac{1}{N-1}\mathbf{U\Sigma}^2\mathbf{U}^\top$$</p>
+<p>The singular vectors $\mathbf{U}$ are the principal axes (sometimes they are alse refered to as principal components).
+To get the principal components (sometimes called principal component scores), we projet the input onto the principal axes $\mathbf{X}'\mathbf{U}$</p>
+<h4 id="conclusions">Conclusions</h4>
+<h2 id="implementation-from-scratch">Implementation from Scratch</h2>
+<p>For the implementation, we will create an abstract class with an interface similar to the one provided by the sklearn library (if you are not familiar with abstract classes check 
+<a href="https://www.geeksforgeeks.org/abstract-classes-in-python/" target="_blank" rel="noopener">this</a> link).
+We will use this class as a base for our two classes that use the previously described methods to compute the PCA.</p>
+<pre><code>class PCA(ABC):
+    def __init__(self, n_components):
+        super().__init__()
+        self._n_components = n_components
+        self._components = None
+        self._explained_variance = None
+        self._mean = None
+
+    @property
+    def mean(self):
+        return self._mean
+
+    @property
+    def explained_variance(self):
+        return self._explained_variance
+
+    @property
+    def components(self):
+        return self._components
+
+    @abstractmethod
+    def fit(self, X):
+        pass
+
+    def transform(self, X):
+        if self._mean is not None:
+            X -= self._mean
+        X_transformed = np.dot(X, self._components.T)
+        return X_transformed
+
+</code></pre>
+<p>The first implementation is for the SVD method, this, is more stable and is similar to the one used in sklearn.</p>
+<pre><code>class PCASVD(PCA):
+    def fit(self, X, y=None, *args, **kwargs):
+        &quot;&quot;&quot;
+        Finds the principal axes and their explained variance
+        :param X: Numpy array
+        :return:
+        &quot;&quot;&quot;
+        n, _ = X.shape
+        self._mean = np.mean(X, axis=0)
+        X -= self._mean
+        v, s, u = np.linalg.svd(X)
+        self._components = u[:self._n_components]
+        explained_variance = np.square(s[:self._n_components]) / (n - 1)
+        self._explained_variance = explained_variance
+
+        return self
+
+</code></pre>
+<p>The second implementation is using Eigenvalue Decomposition.</p>
+<pre><code>class PCAEign(PCA):
+    def fit(self, X):
+        &quot;&quot;&quot;
+        Finds the principal axes and their explained variance
+        :param X: Numpy array
+        :return:
+        &quot;&quot;&quot;
+        n, _ = X.shape
+
+        self._mean = np.mean(X, axis=0)
+        X -= self._mean
+
+        covariance = 1 / (n - 1) * np.matmul(X.T, X)
+        Q, A = np.linalg.eig(covariance)
+        components = A[:, :self._n_components]
+        explained_variance = Q[:self._n_components]
+        self._components = components.transpose()
+        self._explained_variance = explained_variance.T
+
+        return self
+</code></pre>
 
     </div>
 
@@ -658,7 +686,9 @@ corresponding parameters using
 
 <div class="article-tags">
   
-  <a class="badge badge-light" href="/tags/neural-network/">Neural Network</a>
+  <a class="badge badge-light" href="/tags/principal-component-analysis/">Principal Component Analysis</a>
+  
+  <a class="badge badge-light" href="/tags/dimensionality-reduction/">Dimensionality Reduction</a>
   
   <a class="badge badge-light" href="/tags/introduction/">Introduction</a>
   
@@ -677,7 +707,7 @@ corresponding parameters using
       
       
       <li>
-        <a href="https://twitter.com/intent/tweet?url=http://sascezar.github.io/post/neural-network/&amp;text=Neural%20Networks" target="_blank" rel="noopener" class="share-btn-twitter">
+        <a href="https://twitter.com/intent/tweet?url=http://sascezar.github.io/post/pca/&amp;text=Principal%20Component%20Analysis%20%28PCA%29" target="_blank" rel="noopener" class="share-btn-twitter">
           <i class="fab fa-twitter"></i>
         </a>
       </li>
@@ -690,7 +720,7 @@ corresponding parameters using
       
       
       <li>
-        <a href="https://www.facebook.com/sharer.php?u=http://sascezar.github.io/post/neural-network/&amp;t=Neural%20Networks" target="_blank" rel="noopener" class="share-btn-facebook">
+        <a href="https://www.facebook.com/sharer.php?u=http://sascezar.github.io/post/pca/&amp;t=Principal%20Component%20Analysis%20%28PCA%29" target="_blank" rel="noopener" class="share-btn-facebook">
           <i class="fab fa-facebook"></i>
         </a>
       </li>
@@ -703,7 +733,7 @@ corresponding parameters using
       
       
       <li>
-        <a href="mailto:?subject=Neural%20Networks&amp;body=http://sascezar.github.io/post/neural-network/" target="_blank" rel="noopener" class="share-btn-email">
+        <a href="mailto:?subject=Principal%20Component%20Analysis%20%28PCA%29&amp;body=http://sascezar.github.io/post/pca/" target="_blank" rel="noopener" class="share-btn-email">
           <i class="fas fa-envelope"></i>
         </a>
       </li>
@@ -716,7 +746,7 @@ corresponding parameters using
       
       
       <li>
-        <a href="https://www.linkedin.com/shareArticle?url=http://sascezar.github.io/post/neural-network/&amp;title=Neural%20Networks" target="_blank" rel="noopener" class="share-btn-linkedin">
+        <a href="https://www.linkedin.com/shareArticle?url=http://sascezar.github.io/post/pca/&amp;title=Principal%20Component%20Analysis%20%28PCA%29" target="_blank" rel="noopener" class="share-btn-linkedin">
           <i class="fab fa-linkedin-in"></i>
         </a>
       </li>
@@ -729,7 +759,7 @@ corresponding parameters using
       
       
       <li>
-        <a href="https://web.whatsapp.com/send?text=Neural%20Networks%20http://sascezar.github.io/post/neural-network/" target="_blank" rel="noopener" class="share-btn-whatsapp">
+        <a href="https://web.whatsapp.com/send?text=Principal%20Component%20Analysis%20%28PCA%29%20http://sascezar.github.io/post/pca/" target="_blank" rel="noopener" class="share-btn-whatsapp">
           <i class="fab fa-whatsapp"></i>
         </a>
       </li>
@@ -742,7 +772,7 @@ corresponding parameters using
       
       
       <li>
-        <a href="https://service.weibo.com/share/share.php?url=http://sascezar.github.io/post/neural-network/&amp;title=Neural%20Networks" target="_blank" rel="noopener" class="share-btn-weibo">
+        <a href="https://service.weibo.com/share/share.php?url=http://sascezar.github.io/post/pca/&amp;title=Principal%20Component%20Analysis%20%28PCA%29" target="_blank" rel="noopener" class="share-btn-weibo">
           <i class="fab fa-weibo"></i>
         </a>
       </li>
@@ -882,7 +912,7 @@ corresponding parameters using
     <h3>Related</h3>
     <ul>
       
-      <li><a href="/post/pca/">Principal Component Analysis (PCA)</a></li>
+      <li><a href="/post/neural-network/">Neural Networks</a></li>
       
     </ul>
   </div>
