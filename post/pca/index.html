@@ -240,9 +240,9 @@
   <meta property="twitter:image" content="http://sascezar.github.io/post/pca/featured.jpg"><meta property="og:locale" content="en-us">
   
     
-      <meta property="article:published_time" content="2020-04-30T17:26:28&#43;02:00">
+      <meta property="article:published_time" content="2020-04-30T21:05:54&#43;02:00">
     
-    <meta property="article:modified_time" content="2020-04-30T17:26:28&#43;02:00">
+    <meta property="article:modified_time" content="2020-04-30T21:05:54&#43;02:00">
   
 
   
@@ -275,7 +275,7 @@
   ],
   
   "datePublished": "0001-01-01T00:00:00Z",
-  "dateModified": "2020-04-30T17:26:28+02:00",
+  "dateModified": "2020-04-30T21:05:54+02:00",
   
   "author": {
     "@type": "Person",
@@ -531,7 +531,7 @@
   
   <span class="middot-divider"></span>
   <span class="article-reading-time">
-    3 min read
+    4 min read
   </span>
   
 
@@ -569,10 +569,10 @@
 </div>
 
 
-<div class="article-header container-fluid featured-image-wrapper mt-4 mb-4" style="max-width: 2144px; max-height: 1206px;">
+<div class="article-header container-fluid featured-image-wrapper mt-4 mb-4" style="max-width: 1331px; max-height: 715px;">
   <div style="position: relative">
     <img src="/post/pca/featured.jpg" alt="" class="featured-image">
-    <span class="article-header-caption">Image credit: <a href="https://unsplash.com/photos/CpkOjOcXdUY"><strong>Unsplash</strong></a></span>
+    <span class="article-header-caption">Image credit: <a href="https://www.instagram.com/cezar.sas/"><strong>Cezar Sas</strong></a></span>
   </div>
 </div>
 
@@ -581,37 +581,33 @@
   <div class="article-container">
 
     <div class="article-style">
-      <p>In some situations, when working with machine learning models, we have to deal with high dimensional data. This brings various problems to the table, from higher computational time,
-to higer complexity required by the model to describe the data (check 
-<a href="https://en.wikipedia.org/wiki/Curse_of_dimensionality" target="_blank" rel="noopener">Curse of Dimensionality</a>). In order to solve this problem,
-various techniques to reduce the dimensionality of data have been proprosed. One of them is called Principal Component Analysis, and it&rsquo;s a technique that van be used for different application,
-from dimensionality reduction and feature extraction to lossy data compression and data visualization. In this article, we will present the concepts behide this method,
-and then present two implementations in Python from scratch.</p>
+      <p>In some situations, when working with machine learning models, we have to deal with high dimensional data. This brings various problems to the table, from higher computational time, to higer complexity required by the model to describe the data (check 
+<a href="https://en.wikipedia.org/wiki/Curse_of_dimensionality" target="_blank" rel="noopener">Curse of Dimensionality</a>). In order to solve this problem, various techniques to reduce the dimensionality of data have been proprosed, one of them is called Principal Component Analysis (PCA). PCA is a technique that can be used for different application, from dimensionality reduction and feature extraction to lossy data compression and data visualization. In this article, we will present the concepts behide this method, and then present two implementations in Python from scratch.</p>
 <h4 id="description">Description</h4>
 <h4 id="formal-definition">Formal Definition</h4>
-<p>For the formal definition, we will focus on the Singular Value Decomposition formalization, as it is some stable and general compared to the Eigendecomposition, however, you can check the implementation section to get an idea of the differences.</p>
+<p>For the formal definition, we will present the Singular Value Decomposition (SVD)formalization, as it is some stable and general compared to the Eigendecomposition, however, you can check the implementation section to get an idea of the differences.</p>
 <p>Let $\mathbf{X} \in \mathbb{R}^{n \times d}$ be the observation matrix. The first step is to center the data by removing the mean $\mathbf{X}&rsquo; = \mathbf{M X}$, where $\mathbf{M}$ is the 
 <a href="https://en.wikipedia.org/wiki/Centering_matrix" target="_blank" rel="noopener">Centering Matrix</a>.
-Then, we need to perform Singular Value Decomposition on $\mathbf{X}'$, obtaining:</p>
+Then, we need to perform Singular Value Decomposition on $\mathbf{X}'$, obtaining<sup id="fnref:1"><a href="#fn:1" class="footnote-ref" role="doc-noteref">1</a></sup>:</p>
 <p>$$\mathbf{X&rsquo;} = \mathbf{U\Sigma V}^\top$$</p>
 <p>The covariance matrix $\mathbf{C}$ is given by:</p>
 <p>$$\mathbf{C} = \frac{1}{N-1}\mathbf{X'^\top X&rsquo;}$$
-Which, by pluging in the SVD of $\mathbf{X}'$ becomes:
+Which, by pluging in the SVD of $\mathbf{X}'$, becomes:
 $$\mathbf{C} = \frac{1}{N-1} \mathbf{V\Sigma U}^\top \mathbf{U\Sigma V}^\top$$
 Since $\mathbf{U}$ is orthogonal:
 $$\mathbf{C} = \frac{1}{N-1}\mathbf{V\Sigma}^2\mathbf{V}^\top$$</p>
-<p>The singular vectors $\mathbf{V}$ are the principal axes, sometimes they are alse refered to as principal components.
-To get the principal components, also called principal component scores, we projet the input onto the principal axes:
+<p>The singular vectors $\mathbf{V}$ are the principal axes, sometimes they are alse refered to as principal diration or even principal components.  To get the principal components, also called principal component scores, we projet the input onto the principal axes:
 $$\mathbf{X}'\mathbf{V}^\top$$</p>
-<!--$$\mathbf{X}'\mathbf{V} = \mathbf{U\Sigma V}^\top \mathbf{V} = \mathbf{U\Sigma}$$ -->
+<p>We can also rewrite the transformation as:
+$$\mathbf{X}'\mathbf{V} = \mathbf{U\Sigma V}^\top \mathbf{V} = \mathbf{U\Sigma}$$</p>
+<p>which is used when we want to apply the transformation to the same data we are fitting.</p>
 <p>The explained variance of each principal component is defined by:</p>
 <p>$$\sigma = \frac{\mathbf{\Sigma}^2}{N-1}$$</p>
-<p>To perform dimensionality reduction, to a size $k \lt d$, we then can pick a the first $k$ rows of $\mathbf{V}$, and to have the variance of these principal components a the first $k$ elements of the diagonal of $\sigma$.</p>
+<p>To perform dimensionality reduction, to a size $k \lt d$, we then can pick a the first $k$ rows of $\mathbf{V}$, and to have the variance of these principal components a the first $k$ elements of the diagonal of $\sigma$. Then we can project $\mathbf{X}'$ onto the reduced space using the new $\mathbf{V}$.</p>
 <h4 id="conclusions">Conclusions</h4>
 <h2 id="implementation-from-scratch">Implementation from Scratch</h2>
 <p>For the implementation, we will create an abstract class with an interface similar to the one provided by the sklearn library (if you are not familiar with abstract classes check 
-<a href="https://www.geeksforgeeks.org/abstract-classes-in-python/" target="_blank" rel="noopener">this</a> link).
-We will use this class as a base for our two classes that use the previously described methods to compute the PCA.</p>
+<a href="https://www.geeksforgeeks.org/abstract-classes-in-python/" target="_blank" rel="noopener">this</a> link). We will use this class as a base for our two solutions that use the previously described methods to compute the PCA.</p>
 <pre><code>class PCA(ABC):
     def __init__(self, n_components):
         super().__init__()
@@ -654,18 +650,16 @@ We will use this class as a base for our two classes that use the previously des
         n, _ = X.shape
         self._mean = np.mean(X, axis=0)
         X -= self._mean
-        v, s, u = np.linalg.svd(X)
-        self._components = u[:self._n_components]
+        u, s, v = np.linalg.svd(X)
+        self._components = v[:self._n_components]
         explained_variance = np.square(s[:self._n_components]) / (n - 1)
         self._explained_variance = explained_variance
 
         return self
 
 </code></pre>
-<p>The second implementation uses Eigenvalue Decomposition, as mentioned, this is less stable, as computing the
-dot product of $\mathbf{X}^\top\mathbf{X}$ in case of a numerically bad matrix (more formally, the 
-<a href="https://en.wikipedia.org/wiki/Condition_number#Matrices" target="_blank" rel="noopener">Condition Number</a> of the matrix is high) the error will increase.
-This problem is aoided when using the SVD, as we don&rsquo;t compute the covariance matrix directly from the observation matrix.</p>
+<p>The second implementation uses Eigenvalue Decomposition, as mentioned, this is less stable, as computing the dot product of $\mathbf{X}^\top\mathbf{X}$ in case of a numerically bad matrix (more formally, the 
+<a href="https://en.wikipedia.org/wiki/Condition_number#Matrices" target="_blank" rel="noopener">Condition Number</a> of the matrix is high) the error will increase. This problem is avoided when using SVD since we don&rsquo;t compute the covariance matrix directly from the observation matrix.</p>
 <pre><code>class PCAEign(PCA):
     def fit(self, X):
         &quot;&quot;&quot;
@@ -687,6 +681,15 @@ This problem is aoided when using the SVD, as we don&rsquo;t compute the covaria
 
         return self
 </code></pre>
+<section class="footnotes" role="doc-endnotes">
+<hr>
+<ol>
+<li id="fn:1" role="doc-endnote">
+<p>
+<a href="https://stats.stackexchange.com/questions/134282/relationship-between-svd-and-pca-how-to-use-svd-to-perform-pca/134283#134283" target="_blank" rel="noopener">Relationship between SVD and Eigendecomposition in PCA</a> <a href="#fnref:1" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
+</li>
+</ol>
+</section>
 
     </div>
 
