@@ -28,7 +28,7 @@
   
     
   
-  <meta name="description" content="Many times, when dealing with machine learning tasks, we have to deal with high dimensional data.">
+  <meta name="description" content="In some situations, when working with machine learning models, we have to deal with high dimensional data.">
 
   
   <link rel="alternate" hreflang="en-us" href="http://sascezar.github.io/post/pca/">
@@ -236,13 +236,13 @@
   <meta property="og:site_name" content="Cezar Sas">
   <meta property="og:url" content="http://sascezar.github.io/post/pca/">
   <meta property="og:title" content="Principal Component Analysis (PCA) | Cezar Sas">
-  <meta property="og:description" content="Many times, when dealing with machine learning tasks, we have to deal with high dimensional data."><meta property="og:image" content="http://sascezar.github.io/post/pca/featured.jpg">
+  <meta property="og:description" content="In some situations, when working with machine learning models, we have to deal with high dimensional data."><meta property="og:image" content="http://sascezar.github.io/post/pca/featured.jpg">
   <meta property="twitter:image" content="http://sascezar.github.io/post/pca/featured.jpg"><meta property="og:locale" content="en-us">
   
     
-      <meta property="article:published_time" content="2020-04-30T16:03:47&#43;02:00">
+      <meta property="article:published_time" content="2020-04-30T17:26:28&#43;02:00">
     
-    <meta property="article:modified_time" content="2020-04-30T16:03:47&#43;02:00">
+    <meta property="article:modified_time" content="2020-04-30T17:26:28&#43;02:00">
   
 
   
@@ -275,7 +275,7 @@
   ],
   
   "datePublished": "0001-01-01T00:00:00Z",
-  "dateModified": "2020-04-30T16:03:47+02:00",
+  "dateModified": "2020-04-30T17:26:28+02:00",
   
   "author": {
     "@type": "Person",
@@ -290,7 +290,7 @@
       "url": "http://sascezar.github.io/images/icon_hu0b7a4cb9992c9ac0e91bd28ffd38dd00_9727_192x192_fill_lanczos_center_2.png"
     }
   },
-  "description": "Many times, when dealing with machine learning tasks, we have to deal with high dimensional data."
+  "description": "In some situations, when working with machine learning models, we have to deal with high dimensional data."
 }
 </script>
 
@@ -581,25 +581,32 @@
   <div class="article-container">
 
     <div class="article-style">
-      <p>Many times, when dealing with machine learning tasks, we have to deal with high dimensional data. However, this brings various problems, from higher computational time, to higer complexity required by the model
-to describe the data (check 
-<a href="https://en.wikipedia.org/wiki/Curse_of_dimensionality" target="_blank" rel="noopener">Curse of Dimensionality</a>). In order to solve this problem, various techniques to reduce the dimensionality
-of data have been proprosed. One of them is called Principal Component Analysis, and it&rsquo;s a technique that van be used for different application, from dimensionality reduction and feature
-extraction to lossy data compression and data visualization. In this article, we will present the concepts behide this method, and then present two implementations in Python from scratch.</p>
+      <p>In some situations, when working with machine learning models, we have to deal with high dimensional data. This brings various problems to the table, from higher computational time,
+to higer complexity required by the model to describe the data (check 
+<a href="https://en.wikipedia.org/wiki/Curse_of_dimensionality" target="_blank" rel="noopener">Curse of Dimensionality</a>). In order to solve this problem,
+various techniques to reduce the dimensionality of data have been proprosed. One of them is called Principal Component Analysis, and it&rsquo;s a technique that van be used for different application,
+from dimensionality reduction and feature extraction to lossy data compression and data visualization. In this article, we will present the concepts behide this method,
+and then present two implementations in Python from scratch.</p>
 <h4 id="description">Description</h4>
 <h4 id="formal-definition">Formal Definition</h4>
-<p>For the formal definition, we will focus on the Singular Value Decomposition formalization, as it is some stable and general compared to the Eigendecomposition, however, you can check the implementation section to get an idea of how .</p>
-<p>Let $\mathbf{X} \in \mathbb{R}^{(N \times D)}$ be the observation matrix. The first step is to center the data by removing the mean $\mathbf{X}&rsquo; = C_D\mathbf{X}$, where $C_D$ is the 
+<p>For the formal definition, we will focus on the Singular Value Decomposition formalization, as it is some stable and general compared to the Eigendecomposition, however, you can check the implementation section to get an idea of the differences.</p>
+<p>Let $\mathbf{X} \in \mathbb{R}^{n \times d}$ be the observation matrix. The first step is to center the data by removing the mean $\mathbf{X}&rsquo; = \mathbf{M X}$, where $\mathbf{M}$ is the 
 <a href="https://en.wikipedia.org/wiki/Centering_matrix" target="_blank" rel="noopener">Centering Matrix</a>.
-Then, we need to perform Singular Value Decomposition on $\mathbf{X}&lsquo;$, obtaining:</p>
-<p>$$\mathbf{X&rsquo;} = \mathbf{USV}^\top$$</p>
+Then, we need to perform Singular Value Decomposition on $\mathbf{X}'$, obtaining:</p>
+<p>$$\mathbf{X&rsquo;} = \mathbf{U\Sigma V}^\top$$</p>
 <p>The covariance matrix $\mathbf{C}$ is given by:</p>
 <p>$$\mathbf{C} = \frac{1}{N-1}\mathbf{X'^\top X&rsquo;}$$
-$$\mathbf{C} = \frac{1}{N-1}\mathbf{U\Sigma V}^\top \mathbf{V\Sigma U}^\top$$
-Since $\mathbf{V}$ is orthogonal:
-$$\mathbf{C} = \frac{1}{N-1}\mathbf{U\Sigma}^2\mathbf{U}^\top$$</p>
-<p>The singular vectors $\mathbf{U}$ are the principal axes (sometimes they are alse refered to as principal components).
-To get the principal components (sometimes called principal component scores), we projet the input onto the principal axes $\mathbf{X}'\mathbf{U}$</p>
+Which, by pluging in the SVD of $\mathbf{X}'$ becomes:
+$$\mathbf{C} = \frac{1}{N-1} \mathbf{V\Sigma U}^\top \mathbf{U\Sigma V}^\top$$
+Since $\mathbf{U}$ is orthogonal:
+$$\mathbf{C} = \frac{1}{N-1}\mathbf{V\Sigma}^2\mathbf{V}^\top$$</p>
+<p>The singular vectors $\mathbf{V}$ are the principal axes, sometimes they are alse refered to as principal components.
+To get the principal components, also called principal component scores, we projet the input onto the principal axes:
+$$\mathbf{X}'\mathbf{V}^\top$$</p>
+<!--$$\mathbf{X}'\mathbf{V} = \mathbf{U\Sigma V}^\top \mathbf{V} = \mathbf{U\Sigma}$$ -->
+<p>The explained variance of each principal component is defined by:</p>
+<p>$$\sigma = \frac{\mathbf{\Sigma}^2}{N-1}$$</p>
+<p>To perform dimensionality reduction, to a size $k \lt d$, we then can pick a the first $k$ rows of $\mathbf{V}$, and to have the variance of these principal components a the first $k$ elements of the diagonal of $\sigma$.</p>
 <h4 id="conclusions">Conclusions</h4>
 <h2 id="implementation-from-scratch">Implementation from Scratch</h2>
 <p>For the implementation, we will create an abstract class with an interface similar to the one provided by the sklearn library (if you are not familiar with abstract classes check 
@@ -636,7 +643,7 @@ We will use this class as a base for our two classes that use the previously des
         return X_transformed
 
 </code></pre>
-<p>The first implementation is for the SVD method, this, is more stable and is similar to the one used in sklearn.</p>
+<p>The first implementation uses SVD, this method is more stable and is similar to the one used in sklearn.</p>
 <pre><code>class PCASVD(PCA):
     def fit(self, X, y=None, *args, **kwargs):
         &quot;&quot;&quot;
@@ -655,7 +662,10 @@ We will use this class as a base for our two classes that use the previously des
         return self
 
 </code></pre>
-<p>The second implementation is using Eigenvalue Decomposition.</p>
+<p>The second implementation uses Eigenvalue Decomposition, as mentioned, this is less stable, as computing the
+dot product of $\mathbf{X}^\top\mathbf{X}$ in case of a numerically bad matrix (more formally, the 
+<a href="https://en.wikipedia.org/wiki/Condition_number#Matrices" target="_blank" rel="noopener">Condition Number</a> of the matrix is high) the error will increase.
+This problem is aoided when using the SVD, as we don&rsquo;t compute the covariance matrix directly from the observation matrix.</p>
 <pre><code>class PCAEign(PCA):
     def fit(self, X):
         &quot;&quot;&quot;
