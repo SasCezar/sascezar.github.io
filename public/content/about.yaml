@@ -31,11 +31,11 @@ social:
 
 image:
     src: /profile.png
-    alt: Cezar Sas - AI/ML Researcher and PhD Candidate specializing in Natural Language Processing and Software Engineering
+    alt: Cezar Sas - AI/ML Researcher and PhD specializing in Natural Language Processing and Software Engineering
 
 seo:
     site_url: "https://sascezar.github.io"
-    site_title: "Cezar Sas - AI/ML Researcher & NLP Engineer | PhD Candidate"
+    site_title: "Cezar Sas - AI/ML Researcher & NLP Engineer | PhD"
     description: "PhD in AI for Software Engineering with 5+ years of applied AI/ML experience. Specializing in NLP, LLMs, code classification, and machine learning research."
     keywords:
         - AI Researcher
