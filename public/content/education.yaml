@@ -1,0 +1,35 @@
+degrees:
+  - institution: University of Groningen
+    degree: Doctor of Philosophy - PhD
+    field: AI for Software Engineering
+    period: Oct 2020 - Jun 2025
+    logo: /rug_logo.jpeg
+    details:
+      - label: "Thesis"
+        value: "Understanding Software through Automated Classification: A Taxonomic Perspective"
+      - label: "Focus"
+        value: "ML- and NLP-based classification systems, automated taxonomy construction, multi-level annotation frameworks"
+      - label: "Research Areas"
+        value: "LLMs, Software Classification, Graph Neural Networks, Semantic Modeling, Weak Supervision"
+
+  - institution: Università degli Studi di Milano-Bicocca
+    degree: Master's Degree, Computer Science
+    field: Computer Science
+    period: 2016 - 2019
+    grade: 110/110 cum laude
+    logo: /milano_bicocca_logo.jpeg
+    details:
+      - label: "Thesis"
+        value: "Zero-shot Relation Extraction as Multilingual Reading Comprehension"
+      - label: "Skills"
+        value: "Statistics, Docker, Data Analysis, Natural Language Processing, Machine Learning"
+
+  - institution: Università degli Studi di Milano-Bicocca
+    degree: Bachelor's Degree, Computer Science
+    field: Computer Science
+    period: 2013 - 2016
+    grade: 103/110
+    logo: /milano_bicocca_logo.jpeg
+    details:
+      - label: "Thesis"
+        value: "Word Embeddings for Named-Entity Linking"

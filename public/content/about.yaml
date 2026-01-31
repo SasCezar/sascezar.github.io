@@ -1,0 +1,52 @@
+name: Cezar Sas
+titles:
+    - AI/ML Researcher
+    - NLP Engineer
+    - Software Engineer
+    - Data Scientist
+
+location:
+    country: Switzerland
+    city: Lugano, Ticino
+
+bio:
+    intro: "PhD in AI for Software Engineering with 5+ years of applied AI/ML on text and source code. I convert research ideas into well-scoped, reproducible studies and open-source prototypes through data curation, model development, and rigorous evaluation."
+    details: "Recent work includes code classification and LLM-assisted taxonomy construction. Earlier projects focused on multilingual QA and web content classification. I'm known for innovative thinking, clear communication, and collaborative mentoring."
+
+tools:
+    - PyTorch
+    - Hugging Face
+    - LangChain
+    - LangGraph
+    - Qdrant
+    - MongoDB
+    - Docker
+    - ZenML
+
+social:
+    github: https://github.com/SasCezar
+    linkedin: https://www.linkedin.com/in/cezarsas/
+    scholar: https://scholar.google.com/citations?user=XTTwzgwAAAAJ&hl=en
+    email: cezar.sas@gmail.com
+
+image:
+    src: /profile.png
+    alt: Cezar Sas - AI/ML Researcher and PhD Candidate specializing in Natural Language Processing and Software Engineering
+
+seo:
+    site_url: "https://sascezar.github.io"
+    site_title: "Cezar Sas - AI/ML Researcher & NLP Engineer | PhD Candidate"
+    description: "PhD in AI for Software Engineering with 5+ years of applied AI/ML experience. Specializing in NLP, LLMs, code classification, and machine learning research."
+    keywords:
+        - AI Researcher
+        - Machine Learning
+        - NLP
+        - Natural Language Processing
+        - Software Engineering
+        - PhD
+        - Cezar Sas
+        - LLM
+        - Deep Learning
+        - PyTorch
+    og_image: "/profile.png"
+    favicon: "/profile.png"

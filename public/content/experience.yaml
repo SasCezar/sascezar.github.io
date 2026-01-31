@@ -1,0 +1,29 @@
+positions:
+  - title: AI Researcher
+    company: IDSIA USI-SUPSI
+    location: Lugano, Ticino, Switzerland
+    period: Nov 2025 - Present
+    logo: /idsia_logo.jpeg
+    responsibilities:
+      - Conducting advanced AI research focused on machine learning and deep learning applications
+      - Developing novel algorithms and models for real-world AI systems
+      - Collaborating with interdisciplinary teams on cutting-edge research projects
+
+  - title: PhD Researcher – AI for Software Engineering
+    company: University of Groningen
+    location: Groningen, Netherlands
+    period: Nov 2020 - Jun 2025
+    logo: /rug_logo.jpeg
+    responsibilities:
+      - Led applied ML research on code and text data to classify software and improve developer comprehension
+      - Developed the first multi-granular source code classification system across 300+ labels
+      - Published 4 peer-reviewed papers in top-tier SE conferences and journals
+
+  - title: NLP Researcher
+    company: University of Copenhagen - DIKU
+    location: Copenhagen, Denmark
+    period: Oct 2018 - Jan 2019
+    logo: /diku_logo.jpeg
+    responsibilities:
+      - Fine-tuned transformer-based models for multilingual QA and semantic parsing
+      - Engineered data pipelines to process over 1TB of multilingual Wiki data

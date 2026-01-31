@@ -1,0 +1,19 @@
+heading: Get In Touch
+message: "I'm open to roles in AI/ML Engineering, NLP, or LLM systems, where I can bridge deep research knowledge with scalable, real-world implementation."
+
+links:
+  - type: email
+    label: cezar.sas@gmail.com
+    url: mailto:cezar.sas@gmail.com
+  - type: github
+    label: GitHub
+    url: https://github.com/SasCezar
+  - type: linkedin
+    label: LinkedIn
+    url: https://www.linkedin.com/in/cezarsas/
+  - type: scholar
+    label: Google Scholar
+    url: https://scholar.google.com/citations?user=XTTwzgwAAAAJ&hl=en
+
+footer:
+  text: "2025 Mikael D. All rights reserved."

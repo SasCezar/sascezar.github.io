@@ -1,0 +1,35 @@
+publications:
+  - title: Multi-granular software annotation using file-level weak labelling
+    url: https://doi.org/10.1007/s10664-023-10423-7
+    venue: Empirical Software Engineering, 2023
+    type: journal
+
+  - title: "GitRanking: A ranking of GitHub topics for software classification using active sampling"
+    url: https://doi.org/10.1002/spe.3238
+    venue: Software Practice and Experience, 2023
+    type: journal
+
+  - title: Weak labelling for file-level source code classification
+    url: https://doi.ieeecomputersociety.org/10.1109/SANER56733.2023.00074
+    venue: IEEE SANER, 2023
+    type: conference
+
+  - title: Antipatterns in software classification taxonomies
+    url: https://doi.org/10.1016/j.jss.2022.111343
+    venue: Journal of Systems and Software, 2022
+    type: journal
+
+  - title: "WikiBank: Using Wikidata to Improve Multilingual Frame-Semantic Parsing"
+    url: http://www.lrec-conf.org/proceedings/lrec2020/pdf/2020.lrec-1.514.pdf
+    venue: LREC, 2020
+    type: conference
+
+  - title: "X-WikiRE: A Large, Multilingual Resource for Relation Extraction as Machine Comprehension"
+    url: https://www.aclweb.org/anthology/D19-6130/
+    venue: EMNLP Workshop, 2019
+    type: workshop
+
+  - title: "UNIMIB@ NEEL-IT: Named Entity Recognition and Linking of Italian Tweets"
+    url: https://pdfs.semanticscholar.org/052d/3d52d8deb606fb432186e276ad6743e4f6ca.pdf
+    venue: CLiC-it, 2016
+    type: workshop
