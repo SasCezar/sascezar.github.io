@@ -27,17 +27,31 @@ jobs:
                   node-version: "20"
                   cache: "npm"
 
+            - name: Configure Pages
+              uses: actions/configure-pages@v5
+
             - name: Install
               run: npm ci
 
+            # Build with correct base for GitHub Pages project site:
+            # https://<user>.github.io/<repo>/
             - name: Build
-              run: npm run build
+              run: npm run build -- --base=/${{ github.event.repository.name }}/
 
-            # If your build output really is /dist at repo root:
+            # Hard fail if dist/index.html still references /src/main.tsx
+            - name: Sanity check dist
+              run: |
+                  test -f dist/index.html
+                  echo "---- dist/index.html (first 120 lines) ----"
+                  sed -n '1,120p' dist/index.html
+                  echo "---- ensuring prod bundle refs ----"
+                  ! grep -n "/src/main.tsx" dist/index.html
+                  grep -n "assets/" dist/index.html
+
             - name: Upload artifact
               uses: actions/upload-pages-artifact@v3
               with:
-                  path: ./dist
+                  path: dist
 
     deploy:
         runs-on: ubuntu-latest
