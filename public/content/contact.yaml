@@ -1,19 +1,20 @@
-heading: Get In Touch
-message: "I'm open to roles in AI/ML Engineering, NLP, or LLM systems, where I can bridge deep research knowledge with scalable, real-world implementation."
+heading: Let's talk
+
+message: "I’m interested in AI/ML roles focused on LLM systems, agentic workflows, and applied research—especially where strong evaluation and real-world constraints matter. If you're building reliable AI for engineering teams (or researching it), I’d love to connect."
 
 links:
-  - type: email
-    label: cezar.sas@gmail.com
-    url: mailto:cezar.sas@gmail.com
-  - type: github
-    label: GitHub
-    url: https://github.com/SasCezar
-  - type: linkedin
-    label: LinkedIn
-    url: https://www.linkedin.com/in/cezarsas/
-  - type: scholar
-    label: Google Scholar
-    url: https://scholar.google.com/citations?user=XTTwzgwAAAAJ&hl=en
+    - type: email
+      label: cezar.sas@gmail.com
+      url: mailto:cezar.sas@gmail.com
+    - type: linkedin
+      label: LinkedIn
+      url: https://www.linkedin.com/in/cezarsas/
+    - type: github
+      label: GitHub
+      url: https://github.com/SasCezar
+    - type: scholar
+      label: Google Scholar
+      url: https://scholar.google.com/citations?user=XTTwzgwAAAAJ
 
 footer:
-  text: "2025 Mikael D. All rights reserved."
+    text: "© 2026 Cezar Sas. All rights reserved. Design by Mikael D."

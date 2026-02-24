@@ -1,29 +1,59 @@
 positions:
-  - title: AI Researcher
-    company: IDSIA USI-SUPSI
-    location: Lugano, Ticino, Switzerland
-    period: Nov 2025 - Present
-    logo: /idsia_logo.jpeg
-    responsibilities:
-      - Conducting advanced AI research focused on machine learning and deep learning applications
-      - Developing novel algorithms and models for real-world AI systems
-      - Collaborating with interdisciplinary teams on cutting-edge research projects
+    - title: AI Researcher
+      company: IDSIA (USI–SUPSI)
+      location: Lugano, Ticino, Switzerland
+      period: Nov 2025 - Present
+      logo: /idsia_logo.jpeg
+      responsibilities:
+          - Design and evaluate multi-agent AI systems for software engineering workflows, with an emphasis on controllability and measurable outcomes
+          - Architect an agentic framework for scalable orchestration and agent-to-agent coordination within the EU-funded HIVEMIND project
+          - Collaborate across institutions to integrate research prototypes into practical pipelines and validation settings
 
-  - title: PhD Researcher – AI for Software Engineering
-    company: University of Groningen
-    location: Groningen, Netherlands
-    period: Nov 2020 - Jun 2025
-    logo: /rug_logo.jpeg
-    responsibilities:
-      - Led applied ML research on code and text data to classify software and improve developer comprehension
-      - Developed the first multi-granular source code classification system across 300+ labels
-      - Published 4 peer-reviewed papers in top-tier SE conferences and journals
+    - title: PhD Researcher — AI for Software Engineering
+      company: University of Groningen
+      location: Groningen, Netherlands
+      period: Nov 2020 - Jun 2025
+      logo: /rug_logo.jpeg
+      responsibilities:
+          - Ran applied ML research on large-scale code and text corpora to improve repository understanding, classification, and retrieval
+          - Built the first multi-granular source code classification system spanning project/package/file levels across 300+ labels
+          - Developed an LLM-assisted taxonomy construction pipeline combining external knowledge with expert validation
+          - Released AutoFL, an open-source framework for scalable, reproducible experiments in automated repository classification
+          - Published peer-reviewed work in leading Software Engineering venues (JSS, SANER, EMSE)
 
-  - title: NLP Researcher
-    company: University of Copenhagen - DIKU
-    location: Copenhagen, Denmark
-    period: Oct 2018 - Jan 2019
-    logo: /diku_logo.jpeg
-    responsibilities:
-      - Fine-tuned transformer-based models for multilingual QA and semantic parsing
-      - Engineered data pipelines to process over 1TB of multilingual Wiki data
+    - title: Teaching Assistant (ML & Data Science)
+      company: University of Copenhagen
+      location: Copenhagen, Denmark
+      period: Feb 2020 - Jul 2020
+      logo: /diku_logo.jpeg
+      responsibilities:
+          - Supported 100+ students through tutorials, project mentoring, and hands-on debugging sessions
+          - Reviewed and graded coursework; improved assignment clarity and evaluation consistency with the course team
+
+    - title: NLP Researcher
+      company: University of Copenhagen — DIKU
+      location: Copenhagen, Denmark
+      period: Oct 2018 - Feb 2019
+      logo: /diku_logo.jpeg
+      responsibilities:
+          - Fine-tuned transformer models for multilingual QA and semantic parsing in low-resource settings
+          - Built data pipelines to preprocess and align 1TB+ multilingual Wikipedia-scale corpora
+          - Contributed benchmark datasets for underrepresented languages; co-authored peer-reviewed publications
+
+    - title: Machine Learning Engineer
+      company: University of Milano-Bicocca
+      location: Milan, Italy
+      period: Feb 2018 - Jun 2018
+      logo: /milano_bicocca_logo.jpeg
+      responsibilities:
+          - Built a web content classifier to infer commercial intent for automated ad placement
+          - Developed scraping and labeling workflows with quality checks to keep training data high-signal under noisy conditions
+
+    - title: Data Engineer
+      company: Consorzio Milano Ricerche
+      location: Milan, Italy
+      period: Jun 2017 - Oct 2017
+      logo: /cmr_logo.jpeg
+      responsibilities:
+          - Implemented pipelines collecting 2M+ Brexit-related tweets; stored text in MongoDB and relationships in Neo4j
+          - Performed sentiment analysis and graph-based influencer/cluster detection to support a media investigation
