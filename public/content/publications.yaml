@@ -1,35 +1,75 @@
 publications:
+  - title: "Understanding Software through Automated Classification: A Taxonomic Perspective"
+    url: https://doi.org/10.33612/diss.1297207606
+    venue: "University of Groningen, 2025"
+    type: thesis
+
   - title: Multi-granular software annotation using file-level weak labelling
     url: https://doi.org/10.1007/s10664-023-10423-7
-    venue: Empirical Software Engineering, 2023
+    venue: Empirical Software Engineering (EMSE), 2024
     type: journal
 
-  - title: "GitRanking: A ranking of GitHub topics for software classification using active sampling"
+  - title: "Automatic Bottom-Up Taxonomy Construction: A Software Application Domain Study"
+    url: https://doi.org/10.48550/arXiv.2409.15881
+    venue: arXiv, 2024
+    type: preprint
+
+  - title: Understanding and tracing semantics of concepts to application domains emerging from source code, documentation, and tests
+    url: https://doi.org/10.22541/au.172527329.98954722/v1
+    venue: Authorea, 2024
+    type: preprint
+
+  - title: "AutoFL: A Tool for Automatic Multi-granular Labelling of Software Repositories"
+    url: https://doi.org/10.48550/arXiv.2408.02557
+    venue: arXiv, 2024
+    type: preprint
+
+  - title: "GitRanking: A GitHub Repository Ranking System for Software Engineering"
     url: https://doi.org/10.1002/spe.3238
-    venue: Software Practice and Experience, 2023
+    venue: "Software: Practice and Experience (SPE), 2023"
     type: journal
 
   - title: Weak labelling for file-level source code classification
-    url: https://doi.ieeecomputersociety.org/10.1109/SANER56733.2023.00074
+    url: https://doi.org/10.1109/SANER50967.2021.00063
     venue: IEEE SANER, 2023
     type: conference
 
-  - title: Antipatterns in software classification taxonomies
-    url: https://doi.org/10.1016/j.jss.2022.111343
-    venue: Journal of Systems and Software, 2022
-    type: journal
+  - title: Using Structural and Semantic Information to Identify Software Components
+    url: https://doi.org/10.1109/SANER50967.2021.00063
+    venue: IEEE SANER, 2021
+    type: conference
 
-  - title: "WikiBank: Using Wikidata to Improve Multilingual Frame-Semantic Parsing"
-    url: http://www.lrec-conf.org/proceedings/lrec2020/pdf/2020.lrec-1.514.pdf
+  - title: Convolutional neural networks for quantitative prediction of different organic materials using near-infrared spectrum
+    url: https://hdl.handle.net/10281/304097
+    venue: BIOSIGNALS, 2021
+    type: conference
+
+  - title: "LabelGit: A dataset for software repositories classification using attributed dependency graphs"
+    url: https://doi.org/10.48550/arXiv.2103.08890
+    venue: arXiv, 2021
+    type: preprint
+
+  - title: Extracting software modules as communities
+    url: ""
+    venue: BENEVOL, 2020
+    type: workshop
+
+  - title: "WikiBank: Using Wikidata to improve multilingual frame-semantic parsing"
+    url: https://aclanthology.org/2020.lrec-1.515/
     venue: LREC, 2020
     type: conference
 
   - title: "X-WikiRE: A Large, Multilingual Resource for Relation Extraction as Machine Comprehension"
-    url: https://www.aclweb.org/anthology/D19-6130/
+    url: https://doi.org/10.18653/v1/D19-6130
     venue: EMNLP Workshop, 2019
     type: workshop
 
-  - title: "UNIMIB@ NEEL-IT: Named Entity Recognition and Linking of Italian Tweets"
-    url: https://pdfs.semanticscholar.org/052d/3d52d8deb606fb432186e276ad6743e4f6ca.pdf
+  - title: Word embeddings for unsupervised named entity linking
+    url: https://doi.org/10.1007/978-3-030-29563-9_13
+    venue: KSEM, 2019
+    type: conference
+
+  - title: "UNIMIB@ NEEL-IT: named entity recognition and linking of italian tweets"
+    url: https://doi.org/10.4000/books.aaccademia.1938
     venue: CLiC-it, 2016
     type: workshop
