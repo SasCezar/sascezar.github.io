@@ -53,7 +53,7 @@ positions:
       company: Consorzio Milano Ricerche
       location: Milan, Italy
       period: Jun 2017 - Oct 2017
-      logo: /cmr_logo.jpeg
+      logo: /default_logo.png
       responsibilities:
           - Implemented pipelines collecting 2M+ Brexit-related tweets; stored text in MongoDB and relationships in Neo4j
           - Performed sentiment analysis and graph-based influencer/cluster detection to support a media investigation
