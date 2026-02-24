@@ -202,7 +202,7 @@ function App() {
                                 <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-cyan-600 group-hover:w-full transition-all duration-300"></span>
                             </a>
                             <a
-                                href="#portfolio"
+                                href="#publications"
                                 className="text-neutral-700 hover:text-cyan-600 transition-all text-sm font-medium relative group"
                             >
                                 Publications
@@ -259,11 +259,11 @@ function App() {
                                 Education
                             </a>
                             <a
-                                href="#portfolio"
+                                href="#publications"
                                 onClick={closeMenu}
                                 className="block text-neutral-700 hover:text-cyan-600 text-sm font-medium"
                             >
-                                Portfolio
+                                Publications
                             </a>
                             <a
                                 href="#contact"
@@ -587,7 +587,7 @@ function App() {
             </section>
 
             {/* PUBLICATIONS */}
-            <section id="portfolio" className="py-24 bg-[#f5f3ef]">
+            <section id="publications" className="py-24 bg-[#f5f3ef]">
                 <div className="max-w-5xl mx-auto px-6 lg:px-12">
                     <div className="space-y-12">
                         <div className="space-y-4">
